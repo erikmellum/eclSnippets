@@ -30,6 +30,19 @@ fab --host=54.149.66.159 --user=ubuntu deploy_restart:rosettajs, release_master_
 * [ECL Dev](https://ise-dev.emeraldcloudlab.com)
 * [ECL Production](https://ise.emeraldcloudlab.com)
 
+#### SSH
+
+* **Adding SSH Keys**
+```bash
+ssh-keygen -t rsa -C "erik@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+```
+* **Adding SSH Keys**
+```bash
+cat ~/.ssh/id_rsa.pub | ssh username@x.x.x.x 'cat >> .ssh/authorized_keys'
+```
 #### IPs
 
 * **Dev:** 54.149.66.159
